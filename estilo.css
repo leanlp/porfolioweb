@@ -11,7 +11,7 @@ html{
 }
 /* MENU */
 .contenedor-header{
-    background: #1e2326;
+    background: #2e3133;
     position: fixed;
     width: 100%;
     top: 0;
@@ -54,6 +54,20 @@ html{
     border-radius: 5px;
     cursor: pointer;
     display: none;
+}
+.btnWallet {
+    padding:1em 3em;
+    border-radius:0.5em;
+    color:black;
+    font-weight:bold;
+    background:#ff9c9c;
+    /* border-bottom:0.55em solid #ed5d5d; */
+    transition:0.3s;
+}
+.btnWallet:hover {
+    background:#ff5f5f;
+    border-bottom:0.55em solid #100e13; 
+    transition:0.3s;
 }
 /* SECCION I N I C I O */
 .inicio{
