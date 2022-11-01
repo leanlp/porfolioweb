@@ -1,9 +1,3 @@
-// import { Web3 } from "web3";
-
-// import { Web3 } from 'web3'; 
-
-
-
 
 
 let menuVisible = false;
@@ -23,15 +17,6 @@ function seleccionar(){
     document.getElementById("nav").classList = "";
     menuVisible = false;
 }
-
-// const web3 = new Web3(window.ethereum);
-//       web3.eth.requestAccounts().then(console.log);
-
-    function conectW() {
-        document.getElementsByClassName("btnWallet")
-        window.ethereum.request({method: "eth_requestAccounts"})
-      }
-
 
 
 
@@ -60,10 +45,11 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
-function redir(){
-document.getElementById("nft").classList = location.href
-location.href = "https://twitter.com/0xleanlp"
-}
+// function redir(){
+//     location.href = "https://etherscan.io"
+// document.getElementsByClassName("btnWallet").onclick = location.href
+
+// }
 
 // async function getBlockNumber() {
 //     const latestBlockNumber = await web3.eth.getBlockNumber()
