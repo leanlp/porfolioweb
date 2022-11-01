@@ -34,7 +34,7 @@
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div ClassName="btnWallet">
+            <div ClassName="">
             <button id="walletb""> CONECTAR WALLET </button>
             <script>
                 let address;
@@ -46,11 +46,9 @@
                     const provider = new ethers.providers.Web3provider(window.ethereum);
                     await provider.send("eth_requestAccounts", []);
                     const signer = provider.getSigner();
-                    //  address = await signer.getAddress();
-                     console.log("walletb")})
+                     address = await signer.getAddress();
+                     console.log("walletb")});
 
-
-                    
             </script>
             
             </div>
