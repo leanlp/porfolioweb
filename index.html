@@ -7,17 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="estilo.css">
-    <script type="text/javascript" src="\node_modules\web3\dist\web3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"> </script>
-        <script src="PATH/web3.min.js"></script>
-        <script type="text/javascript">  if(typeof window.web3 !== "undefined" && typeof window.web3.currentProvider !== "undefined") {
-            var web3 = new Web3(window.web3.currentProvider);
-          } else {
-            var web3 = new Web3();
-          }
-          </script>
-
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+          
 </head>
 <body>
     
@@ -43,7 +35,23 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div ClassName="btnWallet">
-            <button onclick="redir()"> CONECTAR WALLET </button>
+            <button id="walletb""> CONECTAR WALLET </button>
+            <script>
+                let address;
+                let signer;
+              
+                const connectWallet = document.getElementById('walletb');
+
+                connectWallet.addEventListener('click', async () => {
+                    const provider = new ethers.providers.Web3provider(window.ethereum);
+                    await provider.send("eth_requestAccounts", []);
+                    const signer = provider.getSigner();
+                    //  address = await signer.getAddress();
+                     console.log("walletb")})
+
+
+                    
+            </script>
             
             </div>
         </header>
